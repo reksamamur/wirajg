@@ -1,0 +1,237 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wira Janitra Gunawan</title>
+    <link rel="icon" href="img/icon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="custom.css">
+</head>
+<body class="font-main text-primary dark:text-white">
+    <div class="grid grid-rows-2 grid-cols-1 xl:grid-rows-1 xl:grid-cols-2">
+        <div class="mx-auto h-screen bg-white dark:bg-primary"><!--Left Side-->
+
+            <!--Opened Menu-->
+            <div id="moreMenu" class="hidden fixed bg-white dark:bg-primary w-screen h-screen z-20">
+                <div class="flex flex-col h-screen justify-between">
+
+                    <div class="flex justify-end pt-6 pr-4">
+                        <div onclick="closeMenu()" class="flex flex-nowrap justify-center items-center top-6 right-4 h-12 w-12 rounded-md bg-white dark:bg-primary shadow-lg active:bg-gray-200 md:hidden z-10">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </div>
+                    </div>
+    
+                    <div class="px-8 w-full flex flex-col">
+                        <div class="flex flex-col gap-y-4">
+                            <h1 id="langLabel" class="font-semibold text-base pl-2 pb-2">Change Language</h1>
+    
+                            <button onclick="toEN()" class="flex justify-between items-center rounded-md p-2 active:bg-gray-200 focus:outline-none">
+                                <div class="flex justify-between items-center gap-x-6">
+                                    <div class="h-8 w-8 overflow-hidden rounded-full border-gray-100 border">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                            <circle style="fill:#FFFFFF;" cx="256" cy="256" r="256"/>
+                                            <g>
+                                                <path style="fill:#B22234;" d="M244.87,256H512c0-23.106-3.08-45.49-8.819-66.783H244.87V256z"/>
+                                                <path style="fill:#B22234;" d="M244.87,122.435h229.556c-15.671-25.572-35.708-48.175-59.07-66.783H244.87V122.435z"/>
+                                                <path style="fill:#B22234;" d="M256,512c60.249,0,115.626-20.824,159.356-55.652H96.644C140.374,491.176,195.751,512,256,512z"/>
+                                                <path style="fill:#B22234;" d="M37.574,389.565h436.852c12.581-20.529,22.338-42.969,28.755-66.783H8.819   C15.236,346.596,24.993,369.036,37.574,389.565z"/>
+                                            </g>
+                                            <path style="fill:#3C3B6E;" d="M118.584,39.978h23.329l-21.7,15.765l8.289,25.509l-21.699-15.765L85.104,81.252l7.16-22.037  C73.158,75.13,56.412,93.776,42.612,114.552h7.475l-13.813,10.035c-2.152,3.59-4.216,7.237-6.194,10.938l6.596,20.301l-12.306-8.941  c-3.059,6.481-5.857,13.108-8.372,19.873l7.267,22.368h26.822l-21.7,15.765l8.289,25.509l-21.699-15.765l-12.998,9.444  C0.678,234.537,0,245.189,0,256h256c0-141.384,0-158.052,0-256C205.428,0,158.285,14.67,118.584,39.978z M128.502,230.4  l-21.699-15.765L85.104,230.4l8.289-25.509l-21.7-15.765h26.822l8.288-25.509l8.288,25.509h26.822l-21.7,15.765L128.502,230.4z   M120.213,130.317l8.289,25.509l-21.699-15.765l-21.699,15.765l8.289-25.509l-21.7-15.765h26.822l8.288-25.509l8.288,25.509h26.822  L120.213,130.317z M220.328,230.4l-21.699-15.765L176.93,230.4l8.289-25.509l-21.7-15.765h26.822l8.288-25.509l8.288,25.509h26.822  l-21.7,15.765L220.328,230.4z M212.039,130.317l8.289,25.509l-21.699-15.765l-21.699,15.765l8.289-25.509l-21.7-15.765h26.822  l8.288-25.509l8.288,25.509h26.822L212.039,130.317z M212.039,55.743l8.289,25.509l-21.699-15.765L176.93,81.252l8.289-25.509  l-21.7-15.765h26.822l8.288-25.509l8.288,25.509h26.822L212.039,55.743z"/>    
+                                        </svg>
+                                    </div>
+                                    <span class="text-lg" href="">English (US)</span>
+                                </div>
+                                <svg id="enCheck" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                                </svg>
+                            </button>
+    
+                            <button onclick="toID()" class="flex justify-between items-center rounded-md p-2 active:bg-gray-200 focus:outline-none">
+                                <div class="flex justify-between items-center gap-x-6">
+                                    <div class="h-8 w-8 overflow-hidden rounded-full border-gray-200 border">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                            <circle style="fill:#FFFFFF;" cx="256" cy="256" r="256"/>
+                                            <path style="fill:#FF0000;" d="M0,256C0,114.616,114.616,0,256,0s256,114.616,256,256"/>
+                                        </svg>
+                                    </div>
+                                    <span class="text-lg" href="">Indonesian</span>
+                                </div>
+                                <svg id="idCheck" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                                </svg>
+                            </button>
+    
+                            <h1 id="themeLabel" class="font-semibold text-base pl-2 pt-4 pb-2">Change Theme</h1>
+                            <div class="flex pl-2 gap-x-6">
+
+                                <div onclick="toLight()" class="flex justify-center items-center bg-primary dark:bg-gray-200 dark:bg-opacity-20 rounded-md h-12 w-12 p-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-current stroke-current text-white" fill="currentColor" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                                    </svg>
+                                </div>
+
+                                <div onclick="toDark()" class="flex justify-center items-center bg-gray-200 dark:bg-gray-100 rounded-md h-12 w-12 p-1">
+                                    <svg class="h-5 w-5 transform rotate-12 dark:text-primary fill-current" xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><title>Theme toggle</title>
+                                        <path d="M264,480A232,232,0,0,1,32,248C32,154,86,69.72,169.61,33.33a16,16,0,0,1,21.06,21.06C181.07,76.43,176,104.66,176,136c0,110.28,89.72,200,200,200,31.34,0,59.57-5.07,81.61-14.67a16,16,0,0,1,21.06,21.06C442.28,426,358,480,264,480Z"/>
+                                    </svg>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="w-full flex justify-between pb-8 px-10">
+                        <a title="Send Wira an Email" href="mailto:wira.ux@gmail.com">
+                            <svg class="h-7 w-7 opacity-100 hover:opacity-50 stroke-current" xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" fill="none">
+                                <path d="M424 96H88C65.9086 96 48 113.909 48 136V376C48 398.091 65.9086 416 88 416H424C446.091 416 464 398.091 464 376V136C464 113.909 446.091 96 424 96Z" stroke-width="37" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M112 160L256 272L400 160" stroke-width="37" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <a href="https://dribbble.com/wirajg" target="_blank">
+                            <svg class="h-7 w-7 opacity-100 hover:opacity-50 fill-current" xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><title>Visit Wira's Dribbble</title>
+                                <path d="M256,32C132.33,32,32,132.33,32,256S132.33,480,256,480,480,379.78,480,256,379.67,32,256,32ZM398.22,135.25a186.36,186.36,0,0,1,44,108.38c-40.37-2.1-88.67-2.1-127.4,1.52-4.9-12.37-9.92-24.5-15.4-36.17C344.08,189.62,378.5,164.18,398.22,135.25ZM256,69.33a185.81,185.81,0,0,1,119.12,42.94c-20.3,25.66-52.15,48-91.82,64.86C261.6,137,236.63,102.47,210,75.28A187.51,187.51,0,0,1,256,69.33ZM171.53,89.75c26.95,26.83,52.27,61,74.44,101C203.85,203.62,155.55,211,104,211c-9.8,0-19.36-.35-28.81-.94A186.78,186.78,0,0,1,171.53,89.75ZM69.68,247.13c10.62.47,21.35.7,32.2.59,58.8-.7,113.52-9.92,160.54-25q6.65,13.83,12.6,28.35a115.43,115.43,0,0,0-16.69,5C194.05,283.07,143.42,326.58,116,379.2A186,186,0,0,1,69.33,256C69.33,253,69.45,250.05,69.68,247.13ZM256,442.67a185.57,185.57,0,0,1-114.45-39.32c24.85-49.23,69.18-90,125.07-115.27,5.25-2.45,12.25-4.43,20.3-6.18q10,27.64,17.85,57.4A678,678,0,0,1,322,430.42,185.06,185.06,0,0,1,256,442.67Zm100.92-29.75a672.61,672.61,0,0,0-17.39-92.05c-4-15.17-8.51-29.87-13.41-44.22,36.63-3,80.5-2.57,115.38,0A186.5,186.5,0,0,1,356.92,412.92Z"/>
+                            </svg> 
+                        </a>
+                        <a title="Visit Wira's LinkedIn" href="https://github.com/WiraJG" target="_blank">
+                            <svg class="h-7 w-7 opacity-100 hover:opacity-50 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/>
+                                <path d="M6.94 5a2 2 0 1 1-4-.002 2 2 0 0 1 4 .002zM7 8.48H3V21h4V8.48zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91l.04-1.68z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/wira.ux/" target="_blank">
+                            <svg class="h-7 w-7 opacity-100 hover:opacity-50 fill-current" xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><title>Visit Wira's Instagram</title>
+                                <path d="M349.33,69.33a93.62,93.62,0,0,1,93.34,93.34V349.33a93.62,93.62,0,0,1-93.34,93.34H162.67a93.62,93.62,0,0,1-93.34-93.34V162.67a93.62,93.62,0,0,1,93.34-93.34H349.33m0-37.33H162.67C90.8,32,32,90.8,32,162.67V349.33C32,421.2,90.8,480,162.67,480H349.33C421.2,480,480,421.2,480,349.33V162.67C480,90.8,421.2,32,349.33,32Z"/>
+                                <path d="M377.33,162.67a28,28,0,1,1,28-28A27.94,27.94,0,0,1,377.33,162.67Z"/>
+                                <path d="M256,181.33A74.67,74.67,0,1,1,181.33,256,74.75,74.75,0,0,1,256,181.33M256,144A112,112,0,1,0,368,256,112,112,0,0,0,256,144Z"/>
+                            </svg>
+                        </a>
+                        <a href="https://github.com/WiraJG" target="_blank">
+                            <svg class="h-7 w-7 opacity-100 hover:opacity-50 fill-current" xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><title>Visit Wira's GitHub</title>
+                                <path d="M256,32C132.3,32,32,134.9,32,261.7c0,101.5,64.2,187.5,153.2,217.9a17.56,17.56,0,0,0,3.8.4c8.3,0,11.5-6.1,11.5-11.4,0-5.5-.2-19.9-.3-39.1a102.4,102.4,0,0,1-22.6,2.7c-43.1,0-52.9-33.5-52.9-33.5-10.2-26.5-24.9-33.6-24.9-33.6-19.5-13.7-.1-14.1,1.4-14.1h.1c22.5,2,34.3,23.8,34.3,23.8,11.2,19.6,26.2,25.1,39.6,25.1a63,63,0,0,0,25.6-6c2-14.8,7.8-24.9,14.2-30.7-49.7-5.8-102-25.5-102-113.5,0-25.1,8.7-45.6,23-61.6-2.3-5.8-10-29.2,2.2-60.8a18.64,18.64,0,0,1,5-.5c8.1,0,26.4,3.1,56.6,24.1a208.21,208.21,0,0,1,112.2,0c30.2-21,48.5-24.1,56.6-24.1a18.64,18.64,0,0,1,5,.5c12.2,31.6,4.5,55,2.2,60.8,14.3,16.1,23,36.6,23,61.6,0,88.2-52.4,107.6-102.3,113.3,8,7.1,15.2,21.1,15.2,42.5,0,30.7-.3,55.5-.3,63,0,5.4,3.1,11.5,11.4,11.5a19.35,19.35,0,0,0,4-.4C415.9,449.2,480,363.1,480,261.7,480,134.9,379.7,32,256,32Z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="h-full flex flex-col justify-between px-8 md:px-16">
+
+                <!--Open Menu Button-->
+                <div onclick="openMenu()" class="fixed flex flex-nowrap justify-center items-center top-6 right-4 h-12 w-12 rounded-md bg-white dark:bg-primary shadow-lg active:bg-gray-200 md:hidden z-10">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="24" height="24">
+                        <path fill="none" d="M0 0h24v24H0z"/>
+                        <path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"/>
+                    </svg>
+                </div>
+
+                <header class="relative md:flex justify-between mt-6 md:mt-14">
+                    <div class="relative invisible top-6 right-4 h-12 w-12 rounded-md bg-white dark:bg-primary md:hidden"></div> <!--Invisible Box for Even Spacing-->
+                    <a href="#" class="hidden md:inline text-2xl md:text-3xl font-semibold hover:opacity-50" title="Yep, that's me!">wira jg</a>
+                    <div class="hidden md:flex space-x-8">
+                        <div class="dropdown">
+                            <div class="flex justify-center items-center rounded-md hover:bg-gray-200 dark:hover:bg-gray-200 dark:hover:bg-opacity-20 cursor-pointer py-0.5 px-1.5">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+                                </svg>
+                                <span id="langDisplay" class="px-1.5 font-semibold text-lg">EN</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <ul class="dropdown-menu absolute hidden text-primary font-normal pt-1.5">
+                                <li id="langEn" class=""><a class="rounded-t-md bg-gray-100 hover:bg-gray-200 dark:bg-gray-200 dark:hover:bg-gray-300 py-2 px-4 block whitespace-no-wrap" href="#">English</a></li>
+                                <li id="langId" class=""><a class="bg-gray-100 hover:bg-gray-200 dark:bg-gray-200 dark:hover:bg-gray-300 py-2 px-4 block whitespace-no-wrap" href="#">Indonesian</a></li>
+                                <li class=""><a class="rounded-b-md bg-gray-100 hover:bg-gray-200 dark:bg-gray-200 dark:hover:bg-gray-300 py-2 px-4 block whitespace-no-wrap" href="#">WIP</a></li>
+                            </ul>
+                        </div>
+                        <div id="switchTheme" class="flex justify-center items-center bg-gray-100 hover:bg-gray-200 dark:hover:bg-gray-300 rounded-full h-7 w-7 px-1 py-1 cursor-pointer">
+                            <svg class="h-5 w-5 transform rotate-12 dark:text-primary fill-current" xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><title>Theme toggle</title>
+                                <path d="M264,480A232,232,0,0,1,32,248C32,154,86,69.72,169.61,33.33a16,16,0,0,1,21.06,21.06C181.07,76.43,176,104.66,176,136c0,110.28,89.72,200,200,200,31.34,0,59.57-5.07,81.61-14.67a16,16,0,0,1,21.06,21.06C442.28,426,358,480,264,480Z"/>
+                            </svg>
+                        </div>
+                    </div>
+                </header>
+
+                <main class="relative">
+                    <div class="pr-4 md:pl-12 md:pr-20 lg:pr-80 xl:pl-16 xl:pr-64">
+                        <p id="mainText" class="pb-4 md:pb-5 text-2xl md:text-3xl font-semibold leading-relaxed md:leading-relaxed lg:leading-relaxed xl:leading-relaxed">Hello, I'm Wira 👋</p>
+                        <div class="pb-4 xl:pb-7 text-xl md:text-2xl font-normal leading-relaxed md:leading-relaxed lg:leading-relaxed xl:leading-relaxed"> 
+                            <span id="mainWho">I'm a</span>
+                            <button id="title" onclick="changeText()" title="Who is Wira?" class="text-pink-500 hover:cursor-pointer hover:underline focus:outline-none">UI / UX Designer</button> 
+                            <span id="mainWho2" >based in Indonesia, passionate in creating products that are fun to use and meaningful.</span>
+                        </div>
+                        <div class="text-xl md:text-2xl font-normal leading-relaxed md:leading-relaxed lg:leading-relaxed xl:leading-relaxed">
+                            <p id="mainBlog" class="inline">I occasionally share my thoughts and ideas in my </p>
+                            <a class="hover:opacity-50 underline" href="https://medium.com/@awsum" target="_blank">Medium Blog</a>
+                        </div>
+                    </div>
+                </main>
+
+                <footer class="relative">
+                    <div class="flex justify-center md:justify-between mb-6 md:mb-14">
+                        <div id="socials" class="hidden md:flex items-end space-x-8">
+                            <a title="Send Wira an Email" href="mailto:wira.ux@gmail.com">
+                                <svg class="h-7 w-7 opacity-100 hover:opacity-50 stroke-current" xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" fill="none">
+                                    <path d="M424 96H88C65.9086 96 48 113.909 48 136V376C48 398.091 65.9086 416 88 416H424C446.091 416 464 398.091 464 376V136C464 113.909 446.091 96 424 96Z" stroke-width="37" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M112 160L256 272L400 160" stroke-width="37" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                            <a href="https://dribbble.com/wirajg" target="_blank">
+                                <svg class="h-7 w-7 opacity-100 hover:opacity-50 fill-current" xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><title>Visit Wira's Dribbble</title>
+                                    <path d="M256,32C132.33,32,32,132.33,32,256S132.33,480,256,480,480,379.78,480,256,379.67,32,256,32ZM398.22,135.25a186.36,186.36,0,0,1,44,108.38c-40.37-2.1-88.67-2.1-127.4,1.52-4.9-12.37-9.92-24.5-15.4-36.17C344.08,189.62,378.5,164.18,398.22,135.25ZM256,69.33a185.81,185.81,0,0,1,119.12,42.94c-20.3,25.66-52.15,48-91.82,64.86C261.6,137,236.63,102.47,210,75.28A187.51,187.51,0,0,1,256,69.33ZM171.53,89.75c26.95,26.83,52.27,61,74.44,101C203.85,203.62,155.55,211,104,211c-9.8,0-19.36-.35-28.81-.94A186.78,186.78,0,0,1,171.53,89.75ZM69.68,247.13c10.62.47,21.35.7,32.2.59,58.8-.7,113.52-9.92,160.54-25q6.65,13.83,12.6,28.35a115.43,115.43,0,0,0-16.69,5C194.05,283.07,143.42,326.58,116,379.2A186,186,0,0,1,69.33,256C69.33,253,69.45,250.05,69.68,247.13ZM256,442.67a185.57,185.57,0,0,1-114.45-39.32c24.85-49.23,69.18-90,125.07-115.27,5.25-2.45,12.25-4.43,20.3-6.18q10,27.64,17.85,57.4A678,678,0,0,1,322,430.42,185.06,185.06,0,0,1,256,442.67Zm100.92-29.75a672.61,672.61,0,0,0-17.39-92.05c-4-15.17-8.51-29.87-13.41-44.22,36.63-3,80.5-2.57,115.38,0A186.5,186.5,0,0,1,356.92,412.92Z"/>
+                                </svg> 
+                            </a>
+                            <a title="Visit Wira's LinkedIn" href="https://github.com/WiraJG" target="_blank">
+                                <svg class="h-7 w-7 opacity-100 hover:opacity-50 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/>
+                                    <path d="M6.94 5a2 2 0 1 1-4-.002 2 2 0 0 1 4 .002zM7 8.48H3V21h4V8.48zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91l.04-1.68z"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.instagram.com/wira.ux/" target="_blank">
+                                <svg class="h-7 w-7 opacity-100 hover:opacity-50 fill-current" xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><title>Visit Wira's Instagram</title>
+                                    <path d="M349.33,69.33a93.62,93.62,0,0,1,93.34,93.34V349.33a93.62,93.62,0,0,1-93.34,93.34H162.67a93.62,93.62,0,0,1-93.34-93.34V162.67a93.62,93.62,0,0,1,93.34-93.34H349.33m0-37.33H162.67C90.8,32,32,90.8,32,162.67V349.33C32,421.2,90.8,480,162.67,480H349.33C421.2,480,480,421.2,480,349.33V162.67C480,90.8,421.2,32,349.33,32Z"/>
+                                    <path d="M377.33,162.67a28,28,0,1,1,28-28A27.94,27.94,0,0,1,377.33,162.67Z"/>
+                                    <path d="M256,181.33A74.67,74.67,0,1,1,181.33,256,74.75,74.75,0,0,1,256,181.33M256,144A112,112,0,1,0,368,256,112,112,0,0,0,256,144Z"/>
+                                </svg>
+                            </a>
+                            <a href="https://github.com/WiraJG" target="_blank">
+                                <svg class="h-7 w-7 opacity-100 hover:opacity-50 fill-current" xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><title>Visit Wira's GitHub</title>
+                                    <path d="M256,32C132.3,32,32,134.9,32,261.7c0,101.5,64.2,187.5,153.2,217.9a17.56,17.56,0,0,0,3.8.4c8.3,0,11.5-6.1,11.5-11.4,0-5.5-.2-19.9-.3-39.1a102.4,102.4,0,0,1-22.6,2.7c-43.1,0-52.9-33.5-52.9-33.5-10.2-26.5-24.9-33.6-24.9-33.6-19.5-13.7-.1-14.1,1.4-14.1h.1c22.5,2,34.3,23.8,34.3,23.8,11.2,19.6,26.2,25.1,39.6,25.1a63,63,0,0,0,25.6-6c2-14.8,7.8-24.9,14.2-30.7-49.7-5.8-102-25.5-102-113.5,0-25.1,8.7-45.6,23-61.6-2.3-5.8-10-29.2,2.2-60.8a18.64,18.64,0,0,1,5-.5c8.1,0,26.4,3.1,56.6,24.1a208.21,208.21,0,0,1,112.2,0c30.2-21,48.5-24.1,56.6-24.1a18.64,18.64,0,0,1,5,.5c12.2,31.6,4.5,55,2.2,60.8,14.3,16.1,23,36.6,23,61.6,0,88.2-52.4,107.6-102.3,113.3,8,7.1,15.2,21.1,15.2,42.5,0,30.7-.3,55.5-.3,63,0,5.4,3.1,11.5,11.4,11.5a19.35,19.35,0,0,0,4-.4C415.9,449.2,480,363.1,480,261.7,480,134.9,379.7,32,256,32Z"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="xl:hidden">
+                            <div class="text-sm font-medium pb-6">See Projects</div>
+                            <a class="flex justify-center animate-bounce block" href="#projects">
+                                <svg class="stroke-current dark:text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512">
+                                    <title>See Projects</title>
+                                    <polyline points="112 268 256 412 400 268" style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px"/>
+                                    <line x1="256" y1="392" x2="256" y2="100" style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </footer>
+
+            </div>
+        </div>
+        <div id="projects" class="flex flex-1"><!--Right Side-->
+            <div class="flex-1 xl:overflow-y-scroll">
+                <div class="h-3/4 xl:h-3/5 bg-purple-600">
+
+                </div>
+                <div class="h-3/4 xl:h-3/5 bg-blue-600">
+                    
+                </div>
+                <div class="h-3/4 xl:h-3/5 bg-red-600">
+                    
+                </div>
+                <div class="h-3/4 xl:h-3/5 bg-yellow-500">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
